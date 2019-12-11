@@ -1,0 +1,30 @@
+{
+  "name": "polling",
+  "version": "1.0.0",
+  "description": "polling app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisLind93/Feedback.git"
+  },
+  "author": "Lind",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisLind93/Feedback/issues"
+  },
+  "homepage": "https://github.com/ChrisLind93/Feedback#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.0",
+    "pusher": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
