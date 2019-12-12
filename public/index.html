@@ -11,15 +11,15 @@
 <body>
     <div class="container">
         <h1>Survey for the services we provide/provided</h1><br>
-        <form id="vote-form">
+        <form id="vote-form" action="javascript:void(0);">
             <label for="question1"><h5>How was our service we provided?</h5></label>
-            <input name="question1" name="q1" id="question1"><br>
+            <input type="text" required name="question1" id="q1"><br>
 
             <label for="question2"><h5>Was the information regarding the booking alright?</h5></label>
-            <input name="question2" name="q2" id="question2"><br>
+            <input type="text" required name="question2" id="q2"><br>
             
-            <label for="question3"><h5>Rate our booking service</h5></label>
-            <input name="question3" name="q3" id="question3"><br>
+            <label for="question3"><h5>Rate our booking service(1-10)</h5></label>
+            <input type="number" min="1" max="10" required name="question3" id="q3"><br>
             <br><br><br>
             <p>
                 <h5>Which gender are you? (not required)</h5>
@@ -31,13 +31,15 @@
                 <label for="female">Female</label>
             </p><br>
             <label for="question4"><h5>What is your age? (not required)</h5></label>
-            <input name="question4" name="q4" id="question4"><br>
+            <input type="number" min="1" name="question4" id="q4"><br>
 
             <input type="submit" value="Vote" class"btn">
         </form>
         <br><br>
 
-        <div id="chartContainer" style="height: 300px; width: 100%"></div>
+        <div id="genderGraph" style="height: 300px; width: 100%"></div>
+        <div id="rateUsGraph" style="height: 300px; width: 100%"></div>
+        <div id="averageAgeGraph" style="height: 300px; width: 100%"></div>
     </div>
   
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -48,6 +50,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js" integrity="sha256-CIc5A981wu9+q+hmFYYySmOvsA3IsoX+apaYlL0j6fg=" crossorigin="anonymous"></script>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

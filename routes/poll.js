@@ -29,13 +29,14 @@ router.post('/', (req, res) => {
     }
 
     new Vote(newVote).save().then(vote => {
-        pusher.trigger('survey-poll', 'survey-vote', {
-            points: parseInt(vote.points),
-            survey: vote.survey,
-            q1: vote.q1,
-            q2: vote.q2,
-            q3: vote.q3,
-            q4: vote.q4,
+        pusher.trigger('survey-poll', 'survey-gender', {
+            data: vote.survey, 
+        });
+        pusher.trigger('survey-poll', 'survey-rate', {
+            data: vote.q3,
+        });
+        pusher.trigger('survey-poll', 'survey-age', {
+            data: vote.q4,
         });
         return res.json({success: true, message: 'Thank you for completing the survey'})
     });

@@ -4,12 +4,15 @@ const Schema = mongoose.Schema;
 const VoteSchema = new Schema({
     q1: {
         type: String,
+        required: true
     },
     q2: {
         type: String,
+        required: true
     },
     q3: {
         type: String,
+        required: true
     },
     survey: {
         type: String,
