@@ -3,8 +3,16 @@ const form = document.getElementById('vote-form');
 //Form submit event
 form.addEventListener('submit', (e) => {
     const choice = document.querySelector('input[name=survey]:checked').value;
+    const choice = document.queryCommandValue('input[name=q1]:checked').value;
+    const choice = document.querySelector('input[name=q2]:checked').value;
+    const choice = document.querySelector('input[name=q3]:checked').value;
+    const choice = document.querySelector('input[name=q4]:checked').value;
     const data = { survey: choice };
-
+    const data = { q1: choice };
+    const data = { q2: choice };
+    const data = { q3: choice };
+    const data = { q4: choice };
+    
     fetch('http://localhost:3000/poll', {
         method: 'post',
         body: JSON.stringify(data),

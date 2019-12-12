@@ -10,17 +10,29 @@
 </head>
 <body>
     <div class="container">
-        <h1>Survey for the services we provide/provided</h1>
-        <p>Which gender are you? (not required)</p>
+        <h1>Survey for the services we provide/provided</h1><br>
         <form id="vote-form">
+            <label for="question1"><h5>How was our service we provided?</h5></label>
+            <input name="question1" name="q1" id="question1"><br>
+
+            <label for="question2"><h5>Was the information regarding the booking alright?</h5></label>
+            <input name="question2" name="q2" id="question2"><br>
+            
+            <label for="question3"><h5>Rate our booking service</h5></label>
+            <input name="question3" name="q3" id="question3"><br>
+            <br><br><br>
             <p>
+                <h5>Which gender are you? (not required)</h5>
                 <input type="radio" name="survey" id="male" value="Male">
                 <label for="male">Male</label>
             </p>
             <p>
                 <input type="radio" name="survey" id="female" value="Female">
                 <label for="female">Female</label>
-            </p>
+            </p><br>
+            <label for="question4"><h5>What is your age? (not required)</h5></label>
+            <input name="question4" name="q4" id="question4"><br>
+
             <input type="submit" value="Vote" class"btn">
         </form>
         <br><br>

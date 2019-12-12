@@ -20,14 +20,22 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     const newVote = {
+        q1: req.body.q1,
+        q2: req.body.q2,
+        q3: req.body.q3,
         survey: req.body.survey,
-        points: 1
+        points: 1,
+        q4: req.body.q4,
     }
 
     new Vote(newVote).save().then(vote => {
         pusher.trigger('survey-poll', 'survey-vote', {
             points: parseInt(vote.points),
-            survey: vote.survey
+            survey: vote.survey,
+            q1: vote.q1,
+            q2: vote.q2,
+            q3: vote.q3,
+            q4: vote.q4,
         });
         return res.json({success: true, message: 'Thank you for completing the survey'})
     });
